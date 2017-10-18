@@ -40,7 +40,3 @@ NAMES = [
 	end
 
 end
-
-a = Users.new
-puts a.sort_by_name
-
