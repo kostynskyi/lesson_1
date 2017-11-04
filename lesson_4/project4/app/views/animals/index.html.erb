@@ -1,0 +1,22 @@
+<h1>Listing of animals</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+ 
+  <% @animal.each do |animal| %>
+    <tr>
+      <td><%= animal.name %></td>
+      <td><%= animal.text %></td>
+      <td><%= link_to 'Show', animal_path(animal) %>
+      <td><%= link_to 'Edit', edit_animal_path(animal) %>
+      <td><%= link_to 'Destroy', animal_path(animal),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+      </td>
+    </tr>
+  <% end %>
+</table>
