@@ -1,0 +1,21 @@
+<h1>Listings of cats</h1>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Text</th>
+		<th></th>
+	</tr>
+
+	<%= @cat.each do |cats| %>
+	<tr>
+		<td><%= cats.name %></td>
+		<td><%= cats.text %></td>
+		<td><%= link_to 'Show', cat_path(cats) %></td>
+		<td><%= link_to 'Edit', edit_cat_path(cats) %></td>
+		<td><%= link_to 'Destroy', cat_path(cats), 
+		method: :delete, 
+		data: {confirm: 'Are you sure?'} %></td>
+
+	</tr>
+	<% end %>
+</table>
