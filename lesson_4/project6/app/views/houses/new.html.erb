@@ -1,0 +1,22 @@
+<%= form_with scope: :house, url: houses_path, local: :true do |form| %>
+
+<p>
+	<%= form.label :city %>
+	<%= form.text_field :city %>
+</p>
+
+<p>
+	<%= form.label :street %>
+	<%= form.text_field :street %>
+</p>
+
+<p>
+	<%= form.label :number %>
+	<%= form.text_field :number %>
+</p>
+
+<p>
+	<%= form.submit %>
+</p>
+
+<% end %>
