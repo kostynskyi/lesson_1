@@ -1,0 +1,19 @@
+<h1>Listing of Countries</h1>
+<table>
+	<tr>
+		<th>Part:</th>
+		<th>Country:</th>
+		<th>City:</th>
+	</tr>
+
+	<% @world.each do |world| %>
+	<tr>
+		<td><%= world.part %></td>
+		<td><%= world.country %></td>
+		<td><%= world.city %></td>
+		<td><%= link_to 'Show', world_path(world) %></td>
+		<td><%= link_to 'Edit', edit_world_path(world) %></td>
+		<td><%= link_to 'Destroy', world_path(world), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+	</tr>
+	<% end %>
+</table>
