@@ -1,0 +1,22 @@
+<%= form_with(model: @store, local: :true) do |form| %>
+
+<p>
+	<%= form.label :product %>
+	<%= form.text_field :product %>
+</p>
+
+<p>
+	<%= form.label :price %>
+	<%= form.text_field :price %>
+</p>
+
+<p>
+	<%= form.label :description %>
+	<%= form.text_field :description %>
+</p>
+
+<p>
+	<%= form.submit %>
+</p>
+
+<% end %>
