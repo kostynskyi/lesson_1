@@ -1,0 +1,21 @@
+<h1>List of rooms</h1>
+<table>
+	<tr>
+		<th>Lenght:</th>
+		<th>Width:</th>
+		<th>Hight:</th>
+		<th>Square:</th>
+	</tr>
+
+	<% @room.each do |room| %>
+	<tr>
+		<td><%= room.lenght %></td>
+		<td><%= room.width %></td>
+		<td><%= room.hight %></td>
+		<td><%= room.square %></td>
+		<td><%= link_to 'Show', room_path(room) %></td>
+		<td><%= link_to 'Edit', edit_room_path(room) %></td>
+		<td><%= link_to 'Destroy', room_path(room), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+	</tr>
+	<% end %>
+</table>

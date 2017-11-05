@@ -1,0 +1,27 @@
+<%= form_with scope: :room, url: rooms_path, local: :true do |form| %>
+
+<p>
+	<%= form.label :lenght %>
+	<%= form.text_field :lenght %>
+</p>
+
+<p>
+	<%= form.label :width %>
+	<%= form.text_field :width %>
+</p>
+
+<p>
+	<%= form.label :hight %>
+	<%= form.text_field :hight %>
+</p>
+
+<p>
+	<%= form.label :square %>
+	<%= form.text_field :square %>
+</p>
+
+<p>
+	<%= form.submit %>
+</p>
+
+<% end %>
